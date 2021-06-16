@@ -15,12 +15,13 @@ import java.util.Random;
 	public static void main(String[] args) 
 	{
 	      System.out.println("Welcome to SnakeAndLadder program");
+              int noOfDieRoll = 0;
               int position=0;
 	       System.out.println("Start position of player : "+position);
-	        System.out.println("Start position of player :	"+position);
-
-
 		
+
+                while (position < Win_position){
+//Rolling dice to get random number
 		Random random = new Random();
 	    int droll = 0;
 		while (true)
@@ -28,13 +29,13 @@ import java.util.Random;
     		droll = random.nextInt(7);
     		if(droll !=0) break;
 		}
-		System.out.println(droll);
+
 		System.out.println("Number of dice : "+droll);
 
-		//options
-
-		Random ran = new Random();
-	    int option = 0;
+		//o
+                Random ran = new Random();
+                noOfDieRoll++;        
+                int option = 0;
 		while (true)
 		{
     		option = ran.nextInt(4);
@@ -73,8 +74,8 @@ import java.util.Random;
 
 break;
 
+System.out.println("Number Of Times The Dice Was Played To Win The Game Is : " +noOfDieRoll);
+
               }
-            }
-        }
-    }
+}
 
